@@ -1,17 +1,6 @@
 # practice_project
 
-> [!NOTE]
-> Information the user should notice even if skimming.
+## Just a little c++ refresher project
 
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]
-> Essential information required for user success.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
-> [!WARNING]
-> Dangerous certain consequences of an action.
-
+### Remember to use `g++ <filename.cpp> -o <executableName>` to build
+### and `./<executableName>` to run the program
