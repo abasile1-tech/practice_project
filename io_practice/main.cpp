@@ -15,30 +15,42 @@ int main(){
 	std::string secondNumberInput = "";
 	std::cin >> secondNumberInput;
 
-	std::cout << "Would you like to add, subtract, multiply, or divide? ";
+	std::cout << "Would you like to add, subtract, multiply, divide, exponent, or factorial? ";
 	std::string MathOpInput = "";
 	std::cin >> MathOpInput;
 
-	int result = 0;
+	float result = 0;
 
 	if (MathOpInput == "add" ) {
-		result = std::stoi(firstNumberInput) + std::stoi(secondNumberInput);
+		result = std::stof(firstNumberInput) + std::stof(secondNumberInput);
 		std::cout << firstNumberInput << " + " << secondNumberInput << " = " << result << std::endl;
 	}
 
 	else if (MathOpInput == "subtract" ) {
-		result = std::stoi(firstNumberInput) - std::stoi(secondNumberInput);
+		result = std::stof(firstNumberInput) - std::stof(secondNumberInput);
 		std::cout << firstNumberInput << " - " << secondNumberInput << " = " << result << std::endl;
 	}
 
 	else if (MathOpInput == "multiply" ) {
-		result = std::stoi(firstNumberInput) * std::stoi(secondNumberInput);
+		result = std::stof(firstNumberInput) * std::stof(secondNumberInput);
 		std::cout << firstNumberInput << " * " << secondNumberInput << " = " << result << std::endl;
 	}
 
 	else if (MathOpInput == "divide" ) {
-		result = std::stoi(firstNumberInput) + std::stoi(secondNumberInput);
+		result = std::stof(firstNumberInput) / std::stof(secondNumberInput);
 		std::cout << firstNumberInput << " / " << secondNumberInput << " = " << result << std::endl;
+	}
+
+	else if (MathOpInput == "exponent" ) {
+		result = exponent(std::stoi(firstNumberInput), std::stoi(secondNumberInput));
+		std::cout << std::stoi(firstNumberInput) << " ^ " << std::stoi(secondNumberInput) << " = " << result << std::endl;
+	}
+
+	else if (MathOpInput == "factorial" ) {
+		result = factorial(std::stoi(firstNumberInput));
+		std::cout << "factorial(" << std::stoi(firstNumberInput) << ") = " << result << std::endl;
+		result = factorial(std::stoi(secondNumberInput));
+		std::cout << "factorial(" << std::stoi(secondNumberInput) << ") = " << result << std::endl;
 	}
 
 	else {
